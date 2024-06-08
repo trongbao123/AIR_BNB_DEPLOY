@@ -131,36 +131,72 @@
   color: #8e7037 !important;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width: 1536px) {
+
+  .header {
+   padding-left: 200px;
+  }
+  .nav {
+    margin-left: 345px;
+  }
+}
+@media only screen and (max-width: 1280px) {
   .content1 {
     top: 40px;
-    left: 70px;
+    left: 10px;
   }
   .phone1 {
     top: 37px;
-    left: 328px;
+    left: 280px;
   }
   .logo > img {
     top: 2px;
-    left: 479px;
+    left: 460px;
   }
   .icon1 {
     top: 31px;
-    left: 673px;
+    left: 650px;
   }
   .log-in-out {
     top: 20px;
-    left: 892px;
+    left: 800px;
   }
   .nav {
-    margin-left: -40px;
+    margin-left: -100px;
   }
 }
 
-@media only screen and (max-width: 1024px) {
-  .content1 {
+@media only screen and (max-width: 1023px) {
+    .header {
+    background: #01060a;
+    width: 1024px;
+  }
+    .content1 {
+    display: none;
+  }
+  .phone1 {
+    display: none;
+  }
+   .logo > img {
+    overflow: hidden;
+  }
+  .icon1 {
+    display: none;
+  }
+
+    .nav {
+    margin-left: 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+   .log-in-out {
+    position: absolute;
+    top: 30px;
+    left: 650px;
+  }
+  /* .content1 {
     top: 40px;
-    left: 20px;
+    left: 10px!important;
   }
   .phone1 {
     top: 37px;
@@ -180,11 +216,12 @@
   }
   .nav {
     margin-left: -122px;
-  }
+  } */
 }
 @media only screen and (max-width: 768px) {
   .header {
     background: #01060a;
+    width: 768px;
   }
   .nav {
     margin-left: 0;
@@ -196,10 +233,8 @@
   .phone1 {
     display: none;
   }
-  .logo > img {
-    top: 5px;
-    left: -270px;
-    width: 65%;
+   .logo > img {
+    overflow: hidden;
   }
   .icon1 {
     display: none;
@@ -207,12 +242,13 @@
   .log-in-out {
     position: absolute;
     top: 30px;
-    left: 450px;
+    left: 600px;
   }
 }
 @media only screen and (max-width: 576px) {
   .header {
     background: #01060a;
+        width: 500px;
   }
   .nav {
     margin-left: 0;
@@ -224,11 +260,7 @@
   .phone1 {
     display: none;
   }
-  .logo > img {
-    top: 1px;
-    left: -80px;
-    width: 50%;
-  }
+
   .icon1 {
     display: none;
   }
@@ -257,9 +289,7 @@
     left: 251px;
   }
   .logo > img {
-    top: 1px;
-    left: -50px;
-    width: 50%;
+   overflow: hidden;
   }
   .log-in-out {
     top: 30px;

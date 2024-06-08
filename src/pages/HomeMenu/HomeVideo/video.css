@@ -75,3 +75,9 @@ a {
     border: none;
 }
 
+@media only screen and (max-width: 768px) {
+  .i-frame {
+    width: 750px !important;
+    margin-left: 40px!important;
+  }
+}

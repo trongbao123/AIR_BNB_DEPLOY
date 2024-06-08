@@ -15,7 +15,7 @@ import { history } from "../../App";
 export const getDsPhongTheoViTriAction = (id) => {
   return async (dispatch) => {
     try {
-      await dispatch(DISPLAYLOADINGACTION);
+      // await dispatch(DISPLAYLOADINGACTION);
       const result = await phong.LayPhongTheoViTri(id);
       if (result.status === 200) {
         dispatch({
@@ -23,8 +23,8 @@ export const getDsPhongTheoViTriAction = (id) => {
           DsPhong: result.data.content,
         });
       }
-      await dispatch(HIDELOADINGACTION);
-    } catch (errors) {}
+      // await dispatch(HIDELOADINGACTION);
+    } catch (errors) { }
   };
 };
 
@@ -40,7 +40,7 @@ export const PhongThueAction = (id) => {
         });
       }
       await dispatch(HIDELOADINGACTION);
-    } catch (errors) {}
+    } catch (errors) { }
   };
 };
 
@@ -56,7 +56,7 @@ export const PhongAction = () => {
         });
       }
       await dispatch(HIDELOADINGACTION);
-    } catch (errors) {}
+    } catch (errors) { }
   };
 };
 
@@ -155,6 +155,6 @@ export const BinhLuanTheoPhongAction = (maPhong) => {
         });
       }
       await dispatch(HIDELOADINGACTION);
-    } catch (errors) {}
+    } catch (errors) { }
   };
 };

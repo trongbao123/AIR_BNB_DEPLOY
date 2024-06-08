@@ -20,7 +20,7 @@ import { history } from "../../App";
 export const GetApiDatPhongAction = () => {
   return async (dispatch) => {
     try {
-      await dispatch(DISPLAYLOADINGACTION);
+      // await dispatch(DISPLAYLOADINGACTION);
       const result = await datphong.GetApiDatPhong();
 
       if (result.status === 200) {
@@ -29,16 +29,16 @@ export const GetApiDatPhongAction = () => {
           GetApiDatPhong: result.data.content,
         });
       }
-      await dispatch(HIDELOADINGACTION);
+      // await dispatch(HIDELOADINGACTION);
       console.log("api dặt phòng", result);
-    } catch (errors) {}
+    } catch (errors) { }
   };
 };
 
 export const GetApiDatPhongIDAction = (maPhong) => {
   return async (dispatch) => {
     try {
-      await dispatch(DISPLAYLOADINGACTION);
+      // await dispatch(DISPLAYLOADINGACTION);
       const result = await datphong.GetApiDatPhongId(maPhong);
       console.log("result", result.data.content);
       if (result.status === 200) {
@@ -47,18 +47,18 @@ export const GetApiDatPhongIDAction = (maPhong) => {
           GetApiDatPhongId: result.data.content,
         });
       }
-      await dispatch(HIDELOADINGACTION);
+      // await dispatch(HIDELOADINGACTION);
       console.log("api dặt phòng", result);
     } catch (errors) {
       console.log("error", errors.response?.data.content);
     }
   };
 };
-export const PutApiDatPhongIDAction = (id,value) => {
+export const PutApiDatPhongIDAction = (id, value) => {
   return async (dispatch) => {
     try {
-      await dispatch(DISPLAYLOADINGACTION);
-      const result = await datphong.PutApiDatPhong(id,value);
+      // await dispatch(DISPLAYLOADINGACTION);
+      const result = await datphong.PutApiDatPhong(id, value);
       console.log("result", result.data.content);
       if (result.status === 200) {
         dispatch({
@@ -66,7 +66,7 @@ export const PutApiDatPhongIDAction = (id,value) => {
           PutApiDatPhong: result.data.content,
         });
       }
-      await dispatch(HIDELOADINGACTION);
+      // await dispatch(HIDELOADINGACTION);
       await swal({
         icon: "success",
         text: "Cập Nhật Phòng Thành Công",
@@ -92,7 +92,7 @@ export const PutApiDatPhongIDAction = (id,value) => {
 export const PostApiDatPhongIDAction = (value) => {
   return async (dispatch) => {
     try {
-      dispatch(DISPLAYLOADINGACTION);
+      // dispatch(DISPLAYLOADINGACTION);
       const result = await datphong.PostApiDatPhong(value);
       if (result.status === 200) {
         dispatch({
@@ -102,7 +102,7 @@ export const PostApiDatPhongIDAction = (value) => {
       }
       await dispatch(GetApiDatPhongTheoMaNDAction(value));
       await dispatch({ type: DAT_VE_HOAN_TAT });
-      await dispatch(HIDELOADINGACTION);
+      // await dispatch(HIDELOADINGACTION);
       await swal({
         icon: "success",
         text: "Dặt Phòng Thành Công",
@@ -128,7 +128,7 @@ export const PostApiDatPhongIDAction = (value) => {
 export const DeleteDatPhongIDAction = (id) => {
   return async (dispatch) => {
     try {
-      dispatch(DISPLAYLOADINGACTION);
+      // dispatch(DISPLAYLOADINGACTION);
       const result = await datphong.DeleteDatPhong(id);
       if (result.status === 200) {
         dispatch({
@@ -137,7 +137,7 @@ export const DeleteDatPhongIDAction = (id) => {
         });
       }
       await dispatch(GetApiDatPhongAction());
-      await dispatch(HIDELOADINGACTION);
+      // await dispatch(HIDELOADINGACTION);
       await swal({
         icon: "success",
         text: "Xoa Phong Thành Công",
@@ -161,7 +161,7 @@ export const DeleteDatPhongIDAction = (id) => {
 export const GetApiDatPhongTheoMaNDAction = (maND) => {
   return async (dispatch) => {
     try {
-      await dispatch(DISPLAYLOADINGACTION);
+      // await dispatch(DISPLAYLOADINGACTION);
       const result = await datphong.GetApiDatPhongTheoMaND(maND);
       if (result.status === 200) {
         dispatch({
@@ -170,8 +170,8 @@ export const GetApiDatPhongTheoMaNDAction = (maND) => {
         });
       }
       await dispatch(GetApiDatPhongAction(maND));
-      await dispatch(HIDELOADINGACTION);
+      // await dispatch(HIDELOADINGACTION);
       console.log("api dặt phòng theo Nd", result);
-    } catch (errors) {}
+    } catch (errors) { }
   };
 };

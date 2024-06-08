@@ -12,8 +12,8 @@ export default function HomeVideo(props) {
             <div className="modal fade" id="exampleModal" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div className="modal-dialog">
                 <div className="modal-content">
-                  <div className="modal-body" style={{ width: '190%', height: '520px', marginLeft: -180, marginRight: -250 }}>
-                    <iframe style={{ width: '100%', height: '100%' }} src="https://www.youtube.com/embed/gRogX6YRpwo" type='video/mp4' title="Mẫu video Powerpoint Giới thiệu Khách sạn~Hotel Animation Video Powerpoint~Free Download" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen autoPlay controls />
+                  <div className="modal-body md:w-[80%]" style={{ width: '190%', height: '520px', marginLeft: -180, marginRight: -250 }}>
+                    <iframe className='i-frame' style={{ width: '100%', height: '100%' }} src="https://www.youtube.com/embed/gRogX6YRpwo" type='video/mp4' title="Mẫu video Powerpoint Giới thiệu Khách sạn~Hotel Animation Video Powerpoint~Free Download" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen autoPlay controls />
                   </div>
                 </div>
               </div>

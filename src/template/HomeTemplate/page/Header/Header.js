@@ -18,7 +18,7 @@ import { history } from "../../../../App";
 
 export default function Header(props) {
   const { userlogin } = useSelector((state) => state.QLNDReducer);
-  console.log({ userlogin });
+
   const renderlogin = () => {
     if (_.isEmpty(userlogin)) {
       return (

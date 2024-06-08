@@ -11,13 +11,13 @@ import HomeNews from "./HomeNews/HomeNews";
 
 export default function Home() {
   return (
-    <div>
+    <div className="home">
       {/* carousel */}
       <Carousel />
       {/* HomeMenu */}
       <Homemenu />
       {/* HomeRoom */}
-      <HomeDiemDen/>
+      <HomeDiemDen />
       {/* HomeDesign */}
       <Design />
       {/* HomeVideo */}

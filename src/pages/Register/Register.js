@@ -90,7 +90,7 @@ export default function Register(props) {
                 <div style={{ color: "red" }}>{formik.errors.password}</div>
               ) : null}
             </div>
-            <div className="form-radio" style={{ color: "#191616" }}>
+            {/* <div className="form-radio" style={{ color: "#191616" }}>
               <span className="gender">GENDER</span>
               <label htmlFor="gender" style={{ color: "#191616" }}>
                 Nam
@@ -119,8 +119,8 @@ export default function Register(props) {
               {formik.touched.gender && formik.errors.gender ? (
                 <div className="text-danger">{formik.errors.gender}</div>
               ) : null}
-            </div>
-            <div className="form-group mt-3">
+            </div> */}
+            <div className="form-group mt-0">
               <input
                 name="phone"
                 onChange={formik.handleChange}

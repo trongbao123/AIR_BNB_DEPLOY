@@ -47,6 +47,9 @@ h1.unique {
 }
 
 @media only screen and (max-width: 576px) {
+  .carousel_inner{
+    margin-top: 20px !important;
+  }
   .carousel-caption {
     top: 70px !important;
   }
@@ -58,3 +61,4 @@ h1.unique {
     font-size: 7px;
   }
 }
+
